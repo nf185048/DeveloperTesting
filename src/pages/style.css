@@ -1,0 +1,32 @@
+.left {
+  width: 60%;
+  float: left;
+  height: 450px;
+}
+
+.right {
+  width: 30%;
+  float: center;
+  padding-left: 3em;
+  height: 450px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  float: left;
+  margin: 12em 8em;
+  padding: 2.5em;
+  max-width: 650px;
+  border: 1px solid #E6E6E7;
+}
+
+.devIcon {
+  opacity: .8;
+  transition: 0.3s;
+  color: #3C4CE4;
+}
+
+.devIcon:hover {
+  opacity: 1;
+}

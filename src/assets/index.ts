@@ -1,0 +1,1 @@
+export { ReactComponent as DevIcon } from './dev.svg'
