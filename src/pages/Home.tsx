@@ -22,7 +22,7 @@ export const Home: FC<{}> = () => {
   ));
 
   return (
-    <Card className='container'>
+    <Card className='welcomeCardContainer'>
       <div className='left'>
         <Typography variant="largeTitle">Developers Playground</Typography>
         <Typography variant="title2">Purpose</Typography>

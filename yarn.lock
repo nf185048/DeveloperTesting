@@ -1453,7 +1453,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@ncr-design-system/core@1.0.0-alpha-7.19":
+"@ncr-design-system/core@1.0.0-alpha-7.19", "@ncr-design-system/core@^1.0.0-alpha-7.19":
   version "1.0.0-alpha-7.19"
   resolved "https://ncr.jfrog.io/artifactory/api/npm/cxd-npm-releases/@ncr-design-system/core/-/@ncr-design-system/core-1.0.0-alpha-7.19.tgz#1abb2420895b2ead27777c5331f0281c091cd55c"
   integrity sha1-GrskIIlbLq0nd3xTMfAoHAkc1Vw=

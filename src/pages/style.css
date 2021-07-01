@@ -13,12 +13,16 @@
   align-items: center;
 }
 
-.container {
+.welcomeCardContainer {
   float: left;
   margin: 12em 8em;
   padding: 2.5em;
   max-width: 650px;
   border: 1px solid #E6E6E7;
+}
+
+.devEnvContainer {
+  margin: 6em 4em;
 }
 
 .devIcon {
@@ -29,4 +33,17 @@
 
 .devIcon:hover {
   opacity: 1;
+}
+
+div.border {
+  display: flex;
+  position: relative;
+  align-items: inherit;
+  width: 100%;
+  border: 1px solid #F1F1F1;
+  margin: 2em 0 2em 1em;
+}
+
+.taskItem {
+  padding-bottom: .5em;
 }
