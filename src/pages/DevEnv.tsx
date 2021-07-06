@@ -5,28 +5,28 @@ import './style.css'
 import * as Tasks from '../tasks'
 
 export const DevEnv: FC<{}> = () => {
-  type Task = 'headerPage' | 'loadingPage' | 'loginPage'
+  type Task = 'dashboardPage' | 'loadingPage' | 'loginPage'
   type Variant = "outline" | "link" | "text" | "fill" | undefined
 
   const [currentTask, setTask] = useState<Task>()
-  const [headerButton, setHeaderButton] = useState<Variant>('outline')
+  const [dasbhoardButton, setDashboardButton] = useState<Variant>('outline')
   const [loadingButton, setLoadingButton] = useState<Variant>('outline')
   const [loginButton, setLoginButton] = useState<Variant>('outline')
 
 
   useEffect(() => {
-    if (currentTask === 'headerPage') {
-      setHeaderButton('fill')
+    if (currentTask === 'dashboardPage') {
+      setDashboardButton('fill')
       setLoadingButton('outline')
       setLoginButton('outline')
     }
     if (currentTask === 'loadingPage') {
-      setHeaderButton('outline')
+      setDashboardButton('outline')
       setLoadingButton('fill')
       setLoginButton('outline')
     }
     if (currentTask === 'loginPage') {
-      setHeaderButton('outline')
+      setDashboardButton('outline')
       setLoadingButton('outline')
       setLoginButton('fill')
 
@@ -36,32 +36,44 @@ export const DevEnv: FC<{}> = () => {
   return (
     <div className='devEnvContainer'>
       <Grid container>
-        <Grid item xs={3}>
+        <Grid item xs={2} className='navigation'>
+
           <List>
             <ListTitle>Tasks</ListTitle>
-            <div className='border' />
+            <div className='borderLarge' />
             <Item className='taskItem'>
-              <Button onClick={() => setTask('headerPage')} variant={headerButton}>
-                Create a sticky header
+              <Button style={{ width: '100%' }} onClick={() => setTask('dashboardPage')} variant={dasbhoardButton}>
+                Create a dashboard
               </Button>
             </Item>
             <Item className='taskItem'>
-              <Button onClick={() => setTask('loadingPage')} variant={loadingButton}>
+              <Button style={{ width: '100%' }} onClick={() => setTask('loadingPage')} variant={loadingButton}>
                 Create a loading page
               </Button>
             </Item>
             <Item className='taskItem'>
-              <Button onClick={() => setTask('loginPage')} variant={loginButton}>
+              <Button style={{ width: '100%' }} onClick={() => setTask('loginPage')} variant={loginButton}>
                 Create a login page
               </Button>
             </Item>
           </List>
         </Grid>
-        <Grid item xs={9}>
-          {(currentTask === 'headerPage') && (<Tasks.HeaderPage />)}
-          {(currentTask === 'loadingPage') && (<Tasks.LoadingPage />)}
-          {(currentTask === 'loginPage') && (<Tasks.LoginPage />)}
-        </Grid>
+
+        {(currentTask === 'dashboardPage') && (
+          <Grid item xs={9} className='taskContainer'>
+            <Tasks.DashboardPage />
+          </Grid>
+        )}
+        {(currentTask === 'loadingPage') && (
+          <Grid item xs={9} className='taskContainerDarkTheme'>
+            <Tasks.LoadingPage />
+          </Grid>
+        )}
+        {(currentTask === 'loginPage') && (
+          <Grid item xs={9} className='taskContainer'>
+            <Tasks.LoginPage />
+          </Grid>
+        )}
       </Grid>
     </div>
   )

@@ -22,7 +22,7 @@
 }
 
 .devEnvContainer {
-  margin: 6em 4em;
+  margin: 4em 4em;
 }
 
 .devIcon {
@@ -35,7 +35,7 @@
   opacity: 1;
 }
 
-div.border {
+div.borderLarge {
   display: flex;
   position: relative;
   align-items: inherit;
@@ -43,6 +43,47 @@ div.border {
   border: 1px solid #F1F1F1;
   margin: 2em 0 2em 1em;
 }
+
+div.borderSmall {
+  display: flex;
+  position: relative;
+  align-items: inherit;
+  width: 90%;
+  border: 1px solid #3c4de423;
+  margin: 1em 0 1em;
+}
+
+.navigation {
+  border: 1px solid #F1F1F1;
+  margin-right: 4em;
+  padding: 1em 2em 1em 1em;
+  border-radius: 8px;
+}
+
+.taskContainer {
+  border: 1px solid #F1F1F1;
+  padding: 2em 4em;
+  box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.04);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 400px;
+  right: 0;
+}
+
+.taskContainerDarkTheme {
+  border: 1px solid #F1F1F1;
+  padding: 2em 4em;
+  box-shadow: 8px 16px 40px rgba(0, 0, 0, 0.04);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 400px;
+  right: 0;
+  background-color: #17163F;
+  color: #F1F1F1;
+}
+
 
 .taskItem {
   padding-bottom: .5em;
