@@ -27,8 +27,17 @@
 import React from 'react'
 import type { FC } from 'react'
 import './style.css'
+import * as Theme from '@ncr-design-system/theme-utils'
 
 export const LoadingPage: FC<{}> = () => {
+  /**
+   * Example usage: 
+   * <div style={{backgroundColor: `${theme[5]}`}}></div>
+   */
+  const theme = Theme.generateColor({
+    main: "#3C4CE4", // customize this value as desired
+    type: 'dark'
+  })
 
   return (
     <>

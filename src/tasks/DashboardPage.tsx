@@ -26,16 +26,27 @@
  *    - Use the theme const below to generate a color scheme to create a light 
  *      themed interface
  *  
+ * 
  *  - Note: use the following css code to add a gradient to the deposit card if
- *    you want! 
+ *    we have time and if you want! 
  *    style={{ backgroundImage: `linear-gradient(to bottom right, ${COLOR_1}, ${COLOR_2})` }}
  */
 
 import React from 'react'
 import type { FC } from 'react'
 import './style.css'
+import * as Theme from '@ncr-design-system/theme-utils'
 
 export const DashboardPage: FC<{}> = () => {
+  /**
+   * Example usage: 
+   * <div style={{backgroundColor: `${theme[5]}`}}></div>
+   */
+  const theme = Theme.generateColor({
+    main: "#3C4CE4", // customize this value as desired
+    type: 'light'
+  })
+
   return (
     <>
       {/* Content */}
