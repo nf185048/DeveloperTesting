@@ -25,9 +25,11 @@
  */
 
 import React from 'react'
+// import React, {useContext, useEffect} from 'react'
 import type { FC } from 'react'
 import './style.css'
 import * as Theme from '@ncr-design-system/theme-utils'
+import { Button, ProgressIndicator, Grid, Typography, Card } from '@ncr-design-system/react'
 
 export const LoadingPage: FC<{}> = () => {
   /**
@@ -40,8 +42,28 @@ export const LoadingPage: FC<{}> = () => {
   })
 
   return (
-    <>
+    <Grid container direction='column'>
+
+      <Typography
+        noWrap
+        variant="largeTitle"
+        bold
+        style={{ color: theme[90] }}
+      >
+        Prepare for Loan Advance
+      </Typography>
+      <div style={{ paddingTop: '1em' }} />
+      <Card>
+        <ProgressIndicator
+          percentage={50}
+          variant='large'
+        ></ProgressIndicator>
+      </Card>
+      <div style={{ paddingTop: '1em' }} />
+      <Button> Personal Info</Button>
+      <div style={{ paddingTop: '1em' }} />
+      <Button> Add Documents</Button>
       {/* Content */}
-    </>
+    </Grid>
   )
 }
