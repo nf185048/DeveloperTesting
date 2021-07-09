@@ -21,11 +21,12 @@
 import React from 'react'
 import type { FC } from 'react'
 import './style.css'
+import { } from '@ncr-design-system/react'
 
 export const LoginPage: FC<{}> = () => {
   return (
     <>
-      {/* Content */}
+      {/* Content here */}
     </>
   )
 }

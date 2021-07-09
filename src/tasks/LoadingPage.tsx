@@ -28,6 +28,7 @@ import React from 'react'
 import type { FC } from 'react'
 import './style.css'
 import * as Theme from '@ncr-design-system/theme-utils'
+import { } from '@ncr-design-system/react'
 
 export const LoadingPage: FC<{}> = () => {
   /**
@@ -41,7 +42,7 @@ export const LoadingPage: FC<{}> = () => {
 
   return (
     <>
-      {/* Content */}
+      {/* Content here */}
     </>
   )
 }
