@@ -14,7 +14,8 @@
  * 
  * REQUIRED: 
  *  - 5 cards set up with a Grid (no usage of div tag in this test)
- *    (1) Savings card -> include a button that navigates to another page for savings
+ *    (1) Savings card -> include a button that indicates that it navigates to 
+ *        another page for savings
  *    (2) Budgeting card -> include a progress indicator to show how far along 
  *        the user is on their budgeting (eg. 45% through monthly budget)
  *    (3) Investment card -> include a toggle button for auto investment
@@ -32,7 +33,7 @@ import React from 'react'
 import type { FC } from 'react'
 import './style.css'
 import * as Theme from '@ncr-design-system/theme-utils'
-import { } from '@ncr-design-system/react'
+import { Button, Card, Grid } from '@ncr-design-system/react'
 
 export const DashboardPage: FC<{}> = () => {
   /**
@@ -47,6 +48,16 @@ export const DashboardPage: FC<{}> = () => {
   return (
     <>
       {/* Content here */}
+      <Grid container>
+        <Grid item>
+          <Card style={{ padding: '1em' }}>
+            credit card
+          </Card>
+          <Button>
+            nav to savings
+          </Button>
+        </Grid>
+      </Grid>
     </>
   )
 }
